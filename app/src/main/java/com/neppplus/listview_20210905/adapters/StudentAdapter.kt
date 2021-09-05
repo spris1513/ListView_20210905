@@ -41,8 +41,12 @@ class StudentAdapter(
 
 //        row의 내부에서, 필요한 텍스트뷰 등 UI요소들을 가져오자.
         val nameTxt = row.findViewById<TextView>( R.id.nameTxt )
+        val adressTxt = row.findViewById<TextView>(R.id.addressTxt)
+        val ageTxt = row.findViewById<TextView>(R.id.ageTxt)
 
         nameTxt.text = data.name
+        adressTxt.text = data.address
+
 
 //        만들어진 row를 getView 작업의 결과물로 지정.
 
