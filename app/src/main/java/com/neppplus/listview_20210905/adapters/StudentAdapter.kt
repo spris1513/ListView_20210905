@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import com.neppplus.listview_20210905.R
 import com.neppplus.listview_20210905.datas.StudentData
+import org.w3c.dom.Text
 
 class StudentAdapter(
     val mContext: Context,
@@ -31,6 +33,16 @@ class StudentAdapter(
         val row = tempRow!!
 
 
+//        row가 결과로 나가기 전에 > 내부에 있는 텍스트뷰들을, 실제 데이터에 맞게 문구 변경.
+//        최종 가공 후에 결과로 나가자
+
+//        position의 값 : 위치에 맞게 데이터가, 누구의 데이터인지? 가져오자
+        val data = mList[position]
+
+//        row의 내부에서, 필요한 텍스트뷰 등 UI요소들을 가져오자.
+        val nameTxt = row.findViewById<TextView>( R.id.nameTxt )
+
+        nameTxt.text = data.name
 
 //        만들어진 row를 getView 작업의 결과물로 지정.
 
