@@ -47,6 +47,14 @@ class StudentAdapter(
         nameTxt.text = data.name
         adressTxt.text = data.address
 
+//        ageTxt에는, 출생년도가 아니라 나이가 들어가야함
+//        출생년도로 나이를 계산하는 로직은 어떻게되는가? → 자바 기초 / 파이썬 기초 > 언어 역량
+        val age = 2021 - data.birthTear +1
+
+        ageTxt.text = "(${age}세)"
+
+
+
 
 //        만들어진 row를 getView 작업의 결과물로 지정.
 
