@@ -16,7 +16,6 @@ class StudentData(
 
 //        koreanAge가 최종 결과라고 지정.
         return koreanAge
-
     }
 
 }
